@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  h1 Add Employee
+  table(border='1')
+  form(method='post',action='/emp/updatedata/'+data._id)
+   
+   #form.group
+    lable Employee Id:
+    input.form-control(type="text",name="eid",value=data.empid)
+   #form.group
+    lable Employee Name:
+    input.form-control(type="text",name="ename",value=data.empname)
+   #form.group
+    lable Empployee Department:
+    input.form-control(type="text",name="edep",value=data.empdep)
+    #form.group
+    lable Employee Salary:
+    input.form-control(type="text",name="esal",value=data.empsalary)
+    br
+    input.btn.btn-primary(type="submit",value="Update Employee")
